@@ -1,2 +1,0 @@
-function filterPhotos(cat){const cards=document.querySelectorAll('#photos-grid .photo-card');cards.forEach(c=>{if(cat==='all') c.style.display='flex';else c.style.display = c.dataset.category===cat?'flex':'none';});}
-function toggleTheme(){const html=document.documentElement;if(html.getAttribute('data-theme')==='light'){html.removeAttribute('data-theme');}else{html.setAttribute('data-theme','light');}}
