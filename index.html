@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RC_Telemetry — Telemetria & Cronometraggio RC</title>
+  <meta name="description" content="Sistema di telemetria per automodelli RC: cronometraggio in tempo reale, tempi sul giro e intertempi, velocità massima per giro. Visualizzazione su mobile e client PC per analisi tracciato." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RCT</div>
+        <div>
+          <h1>RC_Telemetry — Telemetria & Cronometraggio RC</h1>
+          <p class="lead">Cronometraggio in tempo reale con tempi sul giro, intertempi e velocità massima per ogni giro. Visualizzazione diretta su cellulare e client PC avanzato.</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#features"><button class="btn btn-ghost">Caratteristiche</button></a>
+        <a href="#photos"><button class="btn btn-ghost">Foto</button></a>
+        <a href="#contact"><button class="btn btn-ghost">Contatto</button></a>
+        <div class="theme-toggle" onclick="toggleTheme()">🌓 Tema</div>
+      </nav>
+    </header>
+
+    <section id="features" class="hero">
+      <div class="card">
+        <h2>Cronometraggio e telemetria in tempo reale</h2>
+        <p class="lead">Il sistema fornisce: tempi sul giro automatici, tempi intermedi (split), e la velocità massima registrata per ogni giro. Tutto aggiornato in tempo reale e visibile direttamente dallo smartphone tramite interfaccia web ottimizzata per mobile.</p>
+
+        <div class="cta">
+          <button class="btn btn-primary">Richiedi una demo</button>
+          <button class="btn btn-ghost">Scarica brochure (PDF)</button>
+        </div>
+
+        <ul class="features">
+          <li>
+            <div class="icon">⏱</div>
+            <div>
+              <strong>Cronometraggio in tempo reale</strong>
+              <div class="lead">Rilevamento passaggi, calcolo tempi sul giro e intertempi con latenza minima.</div>
+              <div class="feature-images">
+                <img src="img/crono1.jpg" alt="Cronometraggio foto 1">
+                <img src="img/crono2.jpg" alt="Cronometraggio foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">⚡</div>
+            <div>
+              <strong>Velocità massima per giro</strong>
+              <div class="lead">Registrazione della velocità top di ogni giro per confronti e analisi.</div>
+              <div class="feature-images">
+                <img src="img/placeholder-velocita1.jpg" alt="Velocità massima foto 1">
+                <img src="img/placeholder-velocita2.jpg" alt="Velocità massima foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">📱</div>
+            <div>
+              <strong>Visualizzazione Mobile</strong>
+              <div class="lead">Interfaccia web responsive: segui i tempi e la posizione direttamente dal cellulare senza installare app.</div>
+              <div class="feature-images">
+                <img src="img/placeholder-mobile1.jpg" alt="Visualizzazione mobile foto 1">
+                <img src="img/placeholder-mobile2.jpg" alt="Visualizzazione mobile foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">🖥️</div>
+            <div>
+              <strong>Client PC per analisi</strong>
+              <div class="lead">Client desktop per disegnare tracciati, posizionare traguardi/intertempi e analizzare i dati con grafici di velocità e frenata.</div>
+              <div class="feature-images">
+                <img src="img/PC_client1.png" alt="Client PC foto 1">
+                <img src="img/placeholder-clientpc2.jpg" alt="Client PC foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">📊</div>
+            <div>
+              <strong>Elaborazione dati</strong>
+              <div class="lead">Grafici di velocità, decelerazione/frenata, comparazione giri e visualizzazione delle registrazioni complete.</div>
+              <div class="feature-images">
+                <img src="img/placeholder-analisi1.jpg" alt="Analisi dati foto 1">
+                <img src="img/placeholder-analisi2.jpg" alt="Analisi dati foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">👥</div>
+            <div>
+              <strong>Multipilota & Database tracciati</strong>
+              <div class="lead">Supporto per più piloti simultanei; database tracciati aggiornabile per memorizzare configurazioni, traguardi e reference line.</div>
+              <div class="feature-images">
+                <img src="img/placeholder-database1.jpg" alt="Database tracciati foto 1">
+                <img src="img/placeholder-database2.jpg" alt="Database tracciati foto 2">
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="specs">
+          <div class="spec">
+            <strong>Frequenza GPS</strong>
+            <div>fino a 25 Hz per tracciamenti precisi</div>
+          </div>
+          <div class="spec">
+            <strong>Output</strong>
+            <div>Tempi, CSV/JSON, streaming TCP/UDP e live view su mobile</div>
+          </div>
+          <div class="spec">
+            <strong>Analisi</strong>
+            <div>Grafici personalizzabili: velocità, accelerazione, frenata e punti di riferimento</div>
+          </div>
+          <div class="spec">
+            <strong>Multipilota</strong>
+            <div>Gestione simultanea di più vetture e confronto giri</div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="card">
+        <h3>Client PC — funzionalità principali</h3>
+        <ul class="lead">
+          <li>Disegno tracciato e posizionamento traguardi/intertempi</li>
+          <li>Visualizzazione traiettorie sovrapposte</li>
+          <li>Elaborazione grafici (velocità, frenata, acc.)</li>
+          <li>Gestione database tracciati aggiornabile</li>
+          <li>Replay sessione e export dei dati</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Photos subpage (anchor) -->
+    <section id="photos" class="card" style="margin-top:28px">
+      <h2>Galleria foto</h2>
+      <p class="lead">Le foto sono organizzate per argomento: test in gara, disegno tracciato e traguardi, database tracciati e streaming video degli eventi multipilota.</p>
+
+      <div class="filter">
+        <div class="tag" data-filter="all" onclick="filterPhotos('all')">Tutte</div>
+        <div class="tag" data-filter="test" onclick="filterPhotos('test')">Test in gara</div>
+        <div class="tag" data-filter="disegno" onclick="filterPhotos('disegno')">Disegno tracciato & Traguardi</div>
+        <div class="tag" data-filter="database" onclick="filterPhotos('database')">Database tracciati</div>
+        <div class="tag" data-filter="streaming" onclick="filterPhotos('streaming')">Streaming video (multipilota)</div>
+      </div>
+
+      <div id="photos-grid" class="photos-grid">
+        <div class="photo-card" data-category="test"><strong>Test in gara 01</strong><div class="lead">Foto dalla sessione di prova.</div></div>
+        <div class="photo-card" data-category="disegno"><strong>Tracciato & Traguardi</strong><div class="lead">Disegno del tracciato con posizioni dei traguardi.</div></div>
+        <div class="photo-card" data-category="database"><strong>Database tracciati</strong><div class="lead">Interfaccia di gestione dei tracciati salvati.</div></div>
+        <div class="photo-card" data-category="streaming"><strong>Streaming evento</strong><div class="lead">Setup streaming multipilota per eventi live.</div></div>
+        <div class="photo-card" data-category="test"><strong>Test in gara 02</strong><div class="lead">Telemetria durante la competizione.</div></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px" class="card">
+      <h3>Contatto & download</h3>
+      <p class="lead">Richiedi demo, firmware di esempio, client PC o il database tracciati aggiornabile.</p>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn btn-primary">Contattaci</button>
+        <button class="btn btn-ghost">Scarica firmware demo</button>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 RC_Telemetry • Telemetria, cronometraggio & analisi • <span style="color:var(--muted)">Multipilota e database tracciati</span>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
