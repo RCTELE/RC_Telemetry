@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RC_Telemetry — Telemetria & Cronometraggio GPS per RC</title>
+  <meta name="description" content="Sistema GPS di telemetria per automodelli RC: cronometraggio in tempo reale, tempi sul giro e intertempi, velocità massima per giro. Visualizzazione su mobile e client PC per analisi tracciato." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    [data-lang] { display: none; }
+    [data-lang].active { display: initial; }  /* mantiene il tipo di elemento originale */
+    .lang-switch { cursor: pointer; margin-left:12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RCT</div>
+        <div>
+          <h1 data-lang="it" class="active">RC_Telemetry — Sistema GPS per Telemetria & Cronometraggio per RC</h1>
+          <h1 data-lang="en">RC_Telemetry — GPS System for RC Telemetry & Lap Timing</h1>
+
+          <p class="lead active" data-lang="it">Cronometraggio in tempo reale con tempi sul giro, intertempi e velocità massima per ogni giro. Visualizzazione diretta su cellulare e client PC avanzato.</p>
+          <p class="lead" data-lang="en">Real-time lap timing with split times and maximum speed per lap. Direct visualization on smartphone and advanced PC client.</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#features">
+          <button class="btn btn-ghost active" data-lang="it">Caratteristiche</button>
+          <button class="btn btn-ghost" data-lang="en">Features</button>
+        </a>
+        <a href="#photos">
+          <button class="btn btn-ghost active" data-lang="it">Foto</button>
+          <button class="btn btn-ghost" data-lang="en">Photos</button>
+        </a>
+        <a href="#contact">
+          <button class="btn btn-ghost active" data-lang="it">Contatto</button>
+          <button class="btn btn-ghost" data-lang="en">Contact</button>
+        </a>
+        <div class="theme-toggle" onclick="toggleTheme()">🌓 <span data-lang="it" class="active">Tema</span><span data-lang="en">Theme</span></div>
+        <div class="lang-switch" onclick="switchLang()">🌐 IT/EN</div>
+      </nav>
+    </header>
+
+    <section id="features" class="hero">
+      <div class="card">
+        <h2 data-lang="it" class="active">Cronometraggio e telemetria in tempo reale</h2>
+        <h2 data-lang="en">Real-time telemetry & lap timing</h2>
+
+        <p class="lead active" data-lang="it">Il sistema GPS fornisce: tempi sul giro, tempi intermedi (split), velocità massima registrata per ogni giro. Tutto aggiornato in tempo reale e visibile direttamente dallo smartphone tramite interfaccia web ottimizzata per mobile.</p>
+        <p class="lead" data-lang="en">The GPS system provides: lap times, split times, and maximum speed recorded per lap. All updated in real time and directly viewable from your smartphone via a mobile-optimized web interface.</p>
+
+        <div class="cta">
+          <button class="btn btn-primary active" data-lang="it">Per approfondimenti:</button>
+          <button class="btn btn-primary" data-lang="en">More info:</button>
+          <a href="mailto:rcteleme@gmail.com" class="btn btn-ghost">rcteleme@gmail.com</a>
+        </div>
+
+        <ul class="features">
+          <li>
+            <div class="icon">⏱</div>
+            <div>
+              <strong data-lang="it" class="active">Cronometraggio in tempo reale</strong>
+              <strong data-lang="en">Real-time lap timing</strong>
+              <div class="lead active" data-lang="it">Rilevamento passaggi, calcolo tempi sul giro e intertempi con latenza minima.</div>
+              <div class="lead" data-lang="en">Lap detection, lap and split time calculation with minimal latency.</div>
+              <div class="feature-images">
+                <img src="img/sistema1.jpg" alt="Cronometraggio foto 1">
+                <img src="img/crono1.jpg" alt="Cronometraggio foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">⚡</div>
+            <div>
+              <strong data-lang="it" class="active">Intertempi e Velocità massima</strong>
+              <strong data-lang="en">Split times & Top speed</strong>
+              <div class="lead active" data-lang="it">Registrazione degli intertempi e velocità top di ogni giro.</div>
+              <div class="lead" data-lang="en">Recording of split times and top speed for each lap.</div>
+              <div class="feature-images">
+                <img src="img/crono2.jpg" alt="Velocità massima foto 1">
+                <img src="img/velo1.jpg" alt="Velocità massima foto 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">📱</div>
+            <div>
+              <strong data-lang="it" class="active">Visualizzazione Mobile</strong>
+              <strong data-lang="en">Mobile Visualization</strong>
+              <div class="lead active" data-lang="it">Interfaccia web responsive: segui i tempi e la velocità direttamente dal cellulare senza installare app.</div>
+              <div class="lead" data-lang="en">Responsive web interface: follow lap times and speed directly on your phone without installing apps.</div>
+              <div class="feature-images">
+                <img src="img/mobile1.jpg" alt="Mobile view 1">
+                <img src="img/mobile2.jpg" alt="Mobile view 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">🖥️</div>
+            <div>
+              <strong data-lang="it" class="active">Client PC per analisi</strong>
+              <strong data-lang="en">PC Client for analysis</strong>
+              <div class="lead active" data-lang="it">Client desktop per disegnare tracciati, posizionare traguardi/intertempi e analizzare i dati con percorso su tracciato, grafici di velocità e frenata.</div>
+              <div class="lead" data-lang="en">Desktop client to draw tracks, set start/finish & split lines, and analyze data with track maps, speed and braking graphs.</div>
+              <div class="feature-images">
+                <img src="img/client2.jpg" alt="Client PC 1">
+                <img src="img/PC_client1.png" alt="Client PC 2">
+                <img src="img/brake1.jpg" alt="Client PC 3">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">📊</div>
+            <div>
+              <strong data-lang="it" class="active">Elaborazione dati</strong>
+              <strong data-lang="en">Data processing</strong>
+              <div class="lead active" data-lang="it">Visualizzazione percorso con grafici di velocità, decelerazione/frenata, comparazione giri e registrazioni complete.</div>
+              <div class="lead" data-lang="en">Track visualization with speed, braking/deceleration graphs, lap comparison and full session replay.</div>
+              <div class="feature-images">
+                <img src="img/dati1.JPG" alt="Data analysis 1">
+                <img src="img/dati2.JPG" alt="Data analysis 2">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="icon">👥</div>
+            <div>
+              <strong data-lang="it" class="active">Multipilota & Database tracciati</strong>
+              <strong data-lang="en">Multi-driver & Track database</strong>
+              <div class="lead active" data-lang="it">Supporto per più piloti simultanei; database tracciati aggiornabile per memorizzare configurazioni, traguardi e reference line.</div>
+              <div class="lead" data-lang="en">Support for multiple drivers simultaneously; updatable track database to save layouts, splits, and reference lines.</div>
+              <div class="feature-images">
+                <img src="img/placeholder-database1.jpg" alt="Track DB 1">
+                <img src="img/tracciati.JPG" alt="Track DB 2">
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="specs">
+          <div class="spec">
+            <strong data-lang="it" class="active">Modulo GPS</strong>
+            <strong data-lang="en">GPS Module</strong>
+            <div data-lang="it" class="active">Modulo GPS evoluto per tracciamenti precisi</div>
+            <div data-lang="en">Advanced GPS module for precise tracking</div>
+          </div>
+          <div class="spec">
+            <strong data-lang="it" class="active">Output</strong>
+            <strong data-lang="en">Output</strong>
+            <div data-lang="it" class="active">Tempi, streaming TCP/UDP, file CSV e live view tracciato su PC</div>
+            <div data-lang="en">Lap times, TCP/UDP streaming, CSV files, and live track view on PC</div>
+          </div>
+          <div class="spec">
+            <strong data-lang="it" class="active">Analisi</strong>
+            <strong data-lang="en">Analysis</strong>
+            <div data-lang="it" class="active">Grafici personalizzabili: velocità, accelerazione, frenata e punti di riferimento</div>
+            <div data-lang="en">Customizable graphs: speed, acceleration, braking, and reference points</div>
+          </div>
+          <div class="spec">
+            <strong data-lang="it" class="active">Multipilota</strong>
+            <strong data-lang="en">Multi-driver</strong>
+            <div data-lang="it" class="active">Gestione simultanea di più vetture e confronto giri</div>
+            <div data-lang="en">Simultaneous management of multiple cars and lap comparison</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 data-lang="it" class="active">Client PC — funzionalità principali</h3>
+        <h3 data-lang="en">PC Client — main features</h3>
+        <ul class="lead">
+          <li data-lang="it" class="active">Disegno tracciato e posizionamento traguardi/intertempi</li>
+          <li data-lang="en">Track drawing and start/finish/split positioning</li>
+          <li data-lang="it" class="active">Visualizzazione traiettorie sovrapposte</li>
+          <li data-lang="en">Overlay trajectory visualization</li>
+          <li data-lang="it" class="active">Elaborazione grafici (velocità, frenata, acc.)</li>
+          <li data-lang="en">Graph processing (speed, braking, acceleration)</li>
+          <li data-lang="it" class="active">Gestione database tracciati aggiornabile</li>
+          <li data-lang="en">Updatable track database management</li>
+          <li data-lang="it" class="active">Replay sessione e export dei dati</li>
+          <li data-lang="en">Session replay and data export</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="card" style="margin-top:28px">
+      <h2 data-lang="it" class="active">Galleria foto</h2>
+      <h2 data-lang="en">Photo gallery</h2>
+      <p class="lead active" data-lang="it">La seguente sezione è in aggiornamento continuo...</p>
+      <p class="lead" data-lang="en">This section is continuously updated...</p>
+
+      <div class="filter">
+        <div class="tag" data-filter="all" onclick="filterPhotos('all')" data-lang="it" class="active">Tutte</div>
+        <div class="tag" data-filter="all" onclick="filterPhotos('all')" data-lang="en">All</div>
+        <div class="tag" data-filter="test" onclick="filterPhotos('test')" data-lang="it" class="active">Test in gara</div>
+        <div class="tag" data-filter="test" onclick="filterPhotos('test')" data-lang="en">Race tests</div>
+        <div class="tag" data-filter="disegno" onclick="filterPhotos('disegno')" data-lang="it" class="active">Disegno tracciato & Traguardi</div>
+        <div class="tag" data-filter="disegno" onclick="filterPhotos('disegno')" data-lang="en">Track drawing & Splits</div>
+        <div class="tag" data-filter="database" onclick="filterPhotos('database')" data-lang="it" class="active">Database tracciati</div>
+        <div class="tag" data-filter="database" onclick="filterPhotos('database')" data-lang="en">Track database</div>
+        <div class="tag" data-filter="streaming" onclick="filterPhotos('streaming')" data-lang="it" class="active">Streaming video (multipilota)</div>
+        <div class="tag" data-filter="streaming" onclick="filterPhotos('streaming')" data-lang="en">Video streaming (multi-driver)</div>
+      </div>
+
+      <div id="photos-grid" class="photos-grid">
+        <div class="photo-card" data-category="test">
+          <strong data-lang="it" class="active">Test in gara 01</strong>
+          <strong data-lang="en">Race test 01</strong>
+          <div class="lead active" data-lang="it">Foto dalla sessione di prova.</div>
+          <div class="lead" data-lang="en">Photo from the test session.</div>
+        </div>
+        <div class="photo-card" data-category="disegno">
+          <strong data-lang="it" class="active">Tracciato & Traguardi</strong>
+          <strong data-lang="en">Track & Splits</strong>
+          <div class="lead active" data-lang="it">Disegno del tracciato con posizioni dei traguardi.</div>
+          <div class="lead" data-lang="en">Track drawing with split positions.</div>
+        </div>
+        <div class="photo-card" data-category="database">
+          <strong data-lang="it" class="active">Database tracciati</strong>
+          <strong data-lang="en">Track database</strong>
+          <div class="lead active" data-lang="it">Interfaccia di gestione dei tracciati salvati.</div>
+          <div class="lead" data-lang="en">Interface for managing saved tracks.</div>
+        </div>
+        <div class="photo-card" data-category="streaming">
+          <strong data-lang="it" class="active">Streaming evento</strong>
+          <strong data-lang="en">Event streaming</strong>
+          <div class="lead active" data-lang="it">Setup streaming multipilota per eventi live.</div>
+          <div class="lead" data-lang="en">Multi-driver live event streaming setup.</div>
+        </div>
+        <div class="photo-card" data-category="test">
+          <strong data-lang="it" class="active">Test in gara 02</strong>
+          <strong data-lang="en">Race test 02</strong>
+          <div class="lead active" data-lang="it">Telemetria durante la competizione.</div>
+          <div class="lead" data-lang="en">Telemetry during competition.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="margin-top:28px" class="card">
+      <h3 data-lang="it" class="active">Contatto:</h3>
+      <h3 data-lang="en">Contact:</h3>
+      <p class="lead active" data-lang="it">Per maggiori informazioni:</p>
+      <p class="lead" data-lang="en">For more information:</p>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn btn-primary active" data-lang="it">Contattaci</button>
+        <button class="btn btn-primary" data-lang="en">Contact us</button>
+        <a href="mailto:rcteleme@gmail.com" class="btn btn-ghost">rcteleme@gmail.com</a>
+      </div>
+    </section>
+
+    <footer>
+      <span data-lang="it" class="active">© 2025 RC_Telemetry • Telemetria, cronometraggio & analisi • <span style="color:var(--muted)">Multipilota e database tracciati</span></span>
+      <span data-lang="en">© 2025 RC_Telemetry • Telemetry, lap timing & analysis • <span style="color:var(--muted)">Multi-driver and track database</span></span>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    let currentLang = "it";
+    function switchLang() {
+      currentLang = (currentLang === "it") ? "en" : "it";
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.classList.remove("active");
+        if (el.getAttribute("data-lang") === currentLang) {
+          el.classList.add("active");
+        }
+      });
+      document.documentElement.lang = currentLang;
+    }
+  </script>
+</body>
+</html>
